@@ -1,0 +1,22 @@
+version: '3'
+services:
+  handbrake:
+    image: jlesage/handbrake:v1.21.0
+    environment:
+      - TZ=Europe/Dublin
+    ports:
+      - "5800:5800"
+    volumes:
+      - "/docker/appdata/handbrake:/config:rw"
+      - "$HOME:/storage:ro"
+      - "$HOME/HandBrake/watch:/watch:rw"
+      - "$HOME/HandBrake/output:/output:rw"
+
+  makemkv:
+    image: jlesage/makemkv:v1.14.0
+    ports:
+      - "5700:5800"
+    volumes:
+      - "/docker/appdata/makemkv:/config:rw"
+      - "$HOME:/storage:ro"
+      - "$HOME/MakeMKV/output:/output:rw"
