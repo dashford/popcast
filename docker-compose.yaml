@@ -8,9 +8,8 @@ services:
       - "5800:5800"
     volumes:
       - "./config/handbrake:/config:rw"
+      - "./output/handbrake:/output:rw"
       - "$HOME:/storage:ro"
-      - "$HOME/HandBrake/watch:/watch:rw"
-      - "$HOME/HandBrake/output:/output:rw"
 
   makemkv:
     image: jlesage/makemkv:v1.14.0
@@ -20,5 +19,5 @@ services:
       - "5700:5800"
     volumes:
       - "./config/makemkv:/config:rw"
+      - "./output/makemkv:/output:rw"
       - "$HOME:/storage:ro"
-      - "$HOME/MakeMKV/output:/output:rw"
