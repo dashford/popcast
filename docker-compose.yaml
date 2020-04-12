@@ -14,6 +14,8 @@ services:
 
   makemkv:
     image: jlesage/makemkv:v1.14.0
+    environment:
+      - MAKEMKV_KEY=${MAKEMKV_KEY}
     ports:
       - "5700:5800"
     volumes:
