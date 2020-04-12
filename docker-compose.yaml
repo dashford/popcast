@@ -1,6 +1,7 @@
 version: '3'
 services:
   handbrake:
+    container_name: handbrake
     image: jlesage/handbrake:v1.21.0
     environment:
       - TZ=Europe/Dublin
@@ -12,6 +13,7 @@ services:
       - "$HOME:/storage:ro"
 
   makemkv:
+    container_name: makemkv
     image: jlesage/makemkv:v1.14.0
     environment:
       - MAKEMKV_KEY=${MAKEMKV_KEY}
