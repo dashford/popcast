@@ -7,7 +7,7 @@ services:
     ports:
       - "5800:5800"
     volumes:
-      - "/docker/appdata/handbrake:/config:rw"
+      - "./config/handbrake:/config:rw"
       - "$HOME:/storage:ro"
       - "$HOME/HandBrake/watch:/watch:rw"
       - "$HOME/HandBrake/output:/output:rw"
@@ -19,6 +19,6 @@ services:
     ports:
       - "5700:5800"
     volumes:
-      - "/docker/appdata/makemkv:/config:rw"
+      - "./config/makemkv:/config:rw"
       - "$HOME:/storage:ro"
       - "$HOME/MakeMKV/output:/output:rw"
