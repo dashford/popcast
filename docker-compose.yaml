@@ -24,3 +24,6 @@ services:
       - "./config/makemkv:/config:rw"
       - "./output/makemkv:/output:rw"
       - "$HOME:/storage:ro"
+    devices:
+      - "/dev/sr0:/dev/sr0"
+      - "/dev/sg2:/dev/sg2"
