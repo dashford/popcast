@@ -22,7 +22,7 @@ services:
       - "5700:5800"
     volumes:
       - "./config/makemkv:/config:rw"
-      - "./output/makemkv:/output:rw"
+      - "/home/dashford/io/makemkv/output/raw:/output:rw"
       - "$HOME:/storage:ro"
     devices:
       - "/dev/sr0:/dev/sr0"
