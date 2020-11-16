@@ -9,7 +9,7 @@ services:
       - "5800:5800"
     volumes:
       - "./config/handbrake:/config:rw"
-      - "./output/handbrake:/output:rw"
+      - "/home/dashford/io/handbrake/output/raw:/output:rw"
       - "$HOME:/storage:ro"
 
   makemkv:
