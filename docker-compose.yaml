@@ -43,6 +43,8 @@ services:
       - TZ=Europe/Dublin
       - USER=${TM_USER}
       - PASS=${TM_PASS}
+      - PUID=1000
+      - PGID=1000
     volumes:
       - transmission:/config
       - "/home/dashford/io/transmission/downloads:/downloads"
