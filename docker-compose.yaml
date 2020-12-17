@@ -35,7 +35,7 @@ services:
       - "8989:8989"
     volumes:
       - sonarr:/config
-      - /home/dashford/io/transmission/downloads:/media/transmission
+      - /home/dashford/io/transmission/downloads:/downloads
       - /home/dashford/io/media/tv:/media/storage/tv
 
   transmission:
