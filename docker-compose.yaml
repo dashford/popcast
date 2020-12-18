@@ -38,6 +38,16 @@ services:
       - /home/dashford/io/transmission/downloads:/downloads
       - /home/dashford/io/media/tv:/media/storage/tv
 
+  radarr:
+    container_name: radarr
+    image: hotio/radarr:release
+    ports:
+      - 7878:7878
+    volumes:
+    - radarr:/config
+    - /home/dashford/io/transmission/downloads:/downloads
+    - /home/dashford/io/media/movies:/media/storage/movies
+
   transmission:
     container_name: transmission
     image: ghcr.io/linuxserver/transmission:version-3.00-r0
@@ -58,6 +68,8 @@ services:
 
 volumes:
   sonarr:
+    driver: local
+  radarr:
     driver: local
   transmission:
     driver: local
