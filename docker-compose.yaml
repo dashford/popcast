@@ -1,32 +1,32 @@
 version: '3'
 services:
-#  handbrake:
-#    container_name: handbrake
-#    image: jlesage/handbrake:v1.22.4
-#    environment:
-#      - TZ=Europe/Dublin
-#    ports:
-#      - "5800:5800"
-#    volumes:
-#      - "./config/handbrake:/config:rw"
-#      - "/home/dashford/io/handbrake/output/raw:/output:rw"
-#      - "$HOME:/storage:ro"
-#
-#  makemkv:
-#    container_name: makemkv
-#    image: jlesage/makemkv:v1.17.0
-#    environment:
-#      - MAKEMKV_KEY=${MAKEMKV_KEY}
-#      - TZ=Europe/Dublin
-#    ports:
-#      - "5700:5800"
-#    volumes:
-#      - "./config/makemkv:/config:rw"
-#      - "/home/dashford/io/makemkv/output/raw:/output:rw"
-#      - "$HOME:/storage:ro"
-#    devices:
-#      - "/dev/sr0:/dev/sr0"
-#      - "/dev/sg2:/dev/sg2"
+  handbrake:
+    container_name: handbrake
+    image: jlesage/handbrake:v1.22.4
+    environment:
+      - TZ=Europe/Dublin
+    ports:
+      - "5800:5800"
+    volumes:
+      - "./config/handbrake:/config:rw"
+      - "/home/dashford/io/handbrake/output/raw:/output:rw"
+      - "$HOME:/storage:ro"
+
+  makemkv:
+    container_name: makemkv
+    image: jlesage/makemkv:v1.17.0
+    environment:
+      - MAKEMKV_KEY=${MAKEMKV_KEY}
+      - TZ=Europe/Dublin
+    ports:
+      - "5700:5800"
+    volumes:
+      - "./config/makemkv:/config:rw"
+      - "/home/dashford/io/makemkv/output/raw:/output:rw"
+      - "$HOME:/storage:ro"
+    devices:
+      - "/dev/sr0:/dev/sr0"
+      - "/dev/sg2:/dev/sg2"
 
   sonarr:
     container_name: sonarr
